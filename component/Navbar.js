@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { IoMenuOutline } from "react-icons/io5";
 import { useRef } from 'react';
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { FaArrowRightToBracket } from "react-icons/fa6";
+
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +74,7 @@ function Navbar() {
             <Link href="/Toppers" ><button className='flex  hover:text-red-700 ' >Academics
                </button></Link>
             <Link href="/Contact" ><button className='flex  hover:text-red-700 ' >Contact us </button></Link>
-            <Link href="https://forms.gle/hga3Xg85MYkt3p3a8" ><button className='flex  hover:text-red-700 ' >Admission</button></Link>
+            
             
             <div className="relative " onMouseEnter={handleCampusEnter} onMouseLeave={handleCampusLeave}>
  <Link href="/Contact" ><button className='flex  hover:text-red-900  '>Campus { < RiArrowDropDownLine className='w-7 h-7'  />}  </button></Link>
@@ -124,7 +126,7 @@ function Navbar() {
           </div>
           
             <div className=' p-1 flex gap-3 '>
-           <Link  target="_blank" href='https://forms.gle/hga3Xg85MYkt3p3a8' >   <button  className='bg-primary rounded text-white font-bold px-2'>Addmission</button>
+           <Link href='https://forms.gle/hga3Xg85MYkt3p3a8' >   <button  className='bg-primary flex py-2 justify-center items-center space-x-1 px-1 rounded text-white font-bold hover:bg-red-700'>Addmission  <FaArrowRightToBracket className='text-white ml-1 animate-bounce' /></button>
            </Link> 
 
              <button onClick={toggleButton} className='sm:hidden'><IoMenuOutline className='text-2xl font-bold mr-3 text-primary' />
@@ -134,19 +136,17 @@ function Navbar() {
           
              
              </button>
-               
+             </div> 
 
-              
-              </div>
-
-           
-
-        </nav>
-         
+         </nav>
          <div ref={ref} className=' sm:hidden  transform transition-transform translate-x-full absolute right-1 p-1 bg-transparent border-2 border-gray-200 bg-slate-600 text-[10px] font-bold text-gray-600'>
-          <ul>About<li></li>
+          <ul>
+          <li>About</li>
           <li>Contact us</li>
-          <li>Topper list</li>
+          <li>Campus</li>
+          <li>Hostel</li>
+          <li>Academics </li>
+          <li>Addmission <FaArrowRightToBracket className='text-white ml-1 animate-bounce' /> </li>
           </ul>
          </div>
         
