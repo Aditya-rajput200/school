@@ -15,7 +15,7 @@ function HomeCarousel() {
   ];
 
   return (
-    <div className="hero-carousel p-3 border-2 border-red-600">
+    <div className="hero-carousel p-3 ">
       <Carousel  
         showThumbs={false}
         autoPlay
